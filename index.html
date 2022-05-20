@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+    <title> <span>Calculatrice</span> </title>
+</head>
+
+<body class="text-center" >
+    <h1> <strong>Calculatrice</strong></h1>
+    <table >
+        <tr>
+            <td colspan="3"><input id="output"></td>
+            <td><button onclick="effacer()">Effacer</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="afficher('1')">1</button></td>
+            <td><button onclick="afficher('2')">2</button></td>
+            <td><button onclick="afficher('3')">3</button></td>
+            <td><button onclick="afficher('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="afficher('4')">4</button></td>
+            <td><button onclick="afficher('5')">5</button></td>
+            <td><button onclick="afficher('6')">6</button></td>
+            <td><button onclick="afficher('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="afficher('7')">7</button></td>
+            <td><button onclick="afficher('8')">8</button></td>
+            <td><button onclick="afficher('9')">9</button></td>
+            <td><button onclick="afficher('*')">*</button></td>
+    
+        </tr>
+        <tr>
+            <td><button onclick="afficher('.')">.</button></td>
+            <td><button onclick="afficher('0')">0</button></td>
+            <td><button onclick="calculer()">=</button></td>
+            <td><button onclick="afficher('/')">/</button></td>
+
+        </tr>
+
+    </table>
+
+
+
+
+    <script>
+        // pour évaluer le chiffre et envoyer à la sortie //
+        function calculer() {
+            let a = document.getElementById("output").value
+            let b = eval(a)
+            document.getElementById("output").value= b
+        }
+        // Pour afficher la valeur //
+        function afficher(val) {
+            document.getElementById("output").value+= val
+
+        }
+
+        // pour effacer la valeur //
+        function effacer() {
+            document.getElementById("output").value=""
+
+        }
+
+    </script>
+</body>
+<footer>
+
+</footer>
+</html>
